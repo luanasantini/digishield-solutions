@@ -4,6 +4,8 @@
 
     --gray-color: #5e5d5d;
 
+    --light-gray-color: #e7e7e7;
+
     --black-color: #262626;
 
     --white-color: #FFFFFF;
@@ -20,7 +22,7 @@ html {
 
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: var(--white-color);
+    background-color: var(--light-gray-color);
     font-size: 16px;
 }
 
@@ -69,12 +71,22 @@ body {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Gabarito', sans-serif;
+}
+
 .wine {
     color: var(--wine-color);
 }
 
 .gray {
     color: var(--gray-color);
+}
+
+.l-gray {
+    color: var(--light-gray-color);
 }
 
 .black {
@@ -99,6 +111,10 @@ body {
 
 .bg-white {
     background-color: var(--white-color);
+}
+
+.bg-lg-gray {
+    background-color: var(--light-gray-color);
 }
 
 .bold {
@@ -148,8 +164,6 @@ header {
 
 .home-title {
     font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'Gabarito', sans-serif;
 }
 
 .home-text {
@@ -158,3 +172,46 @@ header {
     font-weight: 300;
 }
 
+/* --------------------------------------- SERVICES */
+
+#services {
+    padding-bottom: 3rem;
+}
+
+.services-list {
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.service {
+    display: inline-block;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.services-title {
+    font-size: 2rem;
+    padding: 3rem 0;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.services-text {
+    font-size: 1.25rem;
+}
+
+.services-list::after {
+    content: '';
+    position: absolute;
+    bottom: -130px;
+    width: 100vw;
+    height: 90px;
+    background: url(../svg/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
