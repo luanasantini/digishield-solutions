@@ -2,15 +2,16 @@
 
     --wine-color: #94161a;
 
-    --gray-light-color: #949398;
+    --gray-color: #5e5d5d;
 
-    --gray-color: #4f4f51;
-
-    --black-color: #373737;
+    --black-color: #262626;
 
     --white-color: #FFFFFF;
 
 }
+
+
+/* Soluções inteligentes para modelos de segurança contínuos e completos. */
 
 html {
     scroll-behavior: smooth;
@@ -18,9 +19,9 @@ html {
 }
 
 body {
-
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cairo', sans-serif;
     background-color: var(--white-color);
+    font-size: 16px;
 }
 
 .container {
@@ -28,14 +29,80 @@ body {
     padding-right: 10%;
 }
 
-.btn {
+.center {
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
+}
+
+.flex {
+    display: flex
+}
+
+.rel {
+    position: relative
+}
+
+.abs {
+    position: absolute;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.btn {
     display: inline-block;
-    max-width: 352px;
-    border: 1px solid var(--white-color);
+    min-width: 15rem;
     box-sizing: border-box;
-    border-radius: 8px;
-    padding: 1rem 2rem;
+    border-radius: 3rem;
+    padding: 0.75rem;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    margin-bottom: 1rem;
+}
+
+
+.btn:hover {
+    background-color: var(--white-color);
+    color: var(--wine-color);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.wine {
+    color: var(--wine-color);
+}
+
+.gray {
+    color: var(--gray-color);
+}
+
+.black {
+    color: var(--black-color);
+}
+
+.white {
+    color: var(--white-color);
+}
+
+.bg-wine {
+    background-color: var(--wine-color);
+}
+
+.bg-gray {
+    background-color: var(--gray-color);
+}
+
+.bg-black {
+    background-color: var(--black-color);
+}
+
+.bg-white {
+    background-color: var(--white-color);
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* --------------------------------------- CABEÇALHO */
@@ -43,31 +110,51 @@ body {
 header {
     background-color: var(--white-color);
     height: 100px;
-    display: flex;
-    align-items: center;
     margin: 0 auto;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.navbar {
-    align-items: center;
-    justify-content: space-between;
-}
 
 .nav-link {
-    color: var(--wine-color);
-    display: inline;
-    margin: 0 0 0 24px;
+    margin: 0 0 0 1.5rem;
     display: inline-block;
     text-decoration: none;
-    font-size: 1rem;
     font-weight: bold;
 }
 
-.navbar_link:hover {
-    text-decoration: none;
-    color: var(--pink-color);
+.nav-link:hover {
+    color: var(--gray-color);
 }
+
+/* --------------------------------------- HOME */
+
+#home {
+    background-image: url(../img/cyber-bg.webp);
+    padding: 4rem 2rem;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.overlay {
+    background: linear-gradient(180deg, var(--black-color) 50%, var(--black-color) 100%);
+    max-width: 100%;
+    opacity: 0.8;
+    inset: 0;
+}
+
+.home-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Gabarito', sans-serif;
+}
+
+.home-text {
+    padding: 2rem 0 5rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
